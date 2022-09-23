@@ -1,6 +1,5 @@
 package com.bridgelabz;
 import java.util.Scanner;
-import java.util.Scanner;
 import java.util.regex.Pattern;
 public class UserValid {
     public static void main(String[] args) {
