@@ -2,7 +2,6 @@ package com.bridgelabz;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 public class UserValid {
-
     public static void main(String[] args) {
 
     Scanner scan = new Scanner(System.in);
@@ -11,9 +10,9 @@ public class UserValid {
         String firstName = scan.nextLine();
 
         if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
-            System.out.println("First Name is Valid");
+            System.out.println("True");
         } else {
-            System.out.println("First Name Invalid");
+            System.out.println("False");
         }
     }
 }
