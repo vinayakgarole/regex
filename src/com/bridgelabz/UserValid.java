@@ -8,12 +8,14 @@ public class UserValid {
         // Method To Check First Name With Regex Start With Cap And 3 Min. Character
         System.out.println("Enter the first Name: ");
         String firstName = scan.nextLine();
-        System.out.println("Enter the last Name :");
+        System.out.println("Enter the last Name: ");
         String lastName = scan.nextLine();
-        System.out.println("Enter The Mail : ");
+        System.out.println("Enter The Mail: ");
         String mail = scan.nextLine();
-        System.out.println("Enter The Mobile Number With County Code : ");
+        System.out.println("Enter The Mobile Number With County Code: ");
         String mobileNumber = scan.nextLine();
+        System.out.println("Enter the valid password: ");
+        String password = scan.nextLine();
 
         if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
             System.out.println("True");
@@ -37,6 +39,13 @@ public class UserValid {
 
         // Method to check valid Mobile with Regex
         if (Pattern.matches("^91{1}\\s[0-9]{10}", mobileNumber)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+
+        // Check 8 character password
+        if (Pattern.matches("^[A-Za-z1-8]{8}", password)) {
             System.out.println("True");
         } else {
             System.out.println("False");
