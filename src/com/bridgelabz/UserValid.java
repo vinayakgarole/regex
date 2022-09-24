@@ -16,6 +16,8 @@ public class UserValid {
         String mobileNumber = scan.nextLine();
         System.out.println("Enter the valid password: ");
         String password = scan.nextLine();
+        System.out.println("Enter the password at least one upper case: ");
+        String password1 = scan.nextLine();
 
         if (Pattern.matches("^[A-Z][a-z]{2,}", firstName)) {
             System.out.println("True");
@@ -46,6 +48,12 @@ public class UserValid {
 
         // Check 8 character password
         if (Pattern.matches("^[A-Za-z1-8]{8}", password)) {
+            System.out.println("True");
+        } else {
+            System.out.println("False");
+        }
+        // Password at least one upper case
+        if (Pattern.matches("^[A-Z]+[a-z].{7}", password1)) {
             System.out.println("True");
         } else {
             System.out.println("False");
